@@ -9,61 +9,74 @@ export type TaskPageVoice = {
   chips: string[]
 }
 
+/*
+  Task-page voices. Renamed pair:
+    listing → "Local Directory"
+    pdf     → "Reference Library"
+  Underlying task keys unchanged; route paths unchanged.
+*/
 export const taskPageVoices = {
   article: {
-    eyebrow: 'Reading desk',
-    headline: 'Long-form articles with a calmer editorial rhythm.',
-    description: 'Use this page for essays, guides, explainers, and story-led posts. The layout should feel like a publication, not a directory.',
-    filterLabel: 'Choose article topic',
-    secondaryNote: 'Reading surfaces need space, hierarchy, and fewer distractions.',
-    chips: ['Editorial pacing', 'Topic filters', 'Long-read friendly'],
+    eyebrow: 'Field Notes',
+    headline: 'Long-form dispatches and long-read essays from the desk.',
+    description:
+      'Long-form entries that sit between the directory and the reference library — context, background, and interpretation.',
+    filterLabel: 'Choose a topic',
+    secondaryNote: 'Long reads earn hierarchy and space, not marketing decoration.',
+    chips: ['Editorial pace', 'Deep reads', 'Categorized'],
   },
   classified: {
-    eyebrow: 'Notice board',
-    headline: 'Fast-moving classifieds, offers, and time-sensitive posts.',
-    description: 'Classified content should feel quick to scan, practical, and action-oriented with less editorial decoration.',
-    filterLabel: 'Filter classified category',
-    secondaryNote: 'Prioritize urgency, short summaries, and direct browsing.',
-    chips: ['Fast scan', 'Offers', 'Action cues'],
+    eyebrow: 'Notice Board',
+    headline: 'Time-sensitive offers, fixtures and gear that move fast.',
+    description:
+      'The notice board is the fastest-moving collection. Every entry is action-oriented and short-lived by design.',
+    filterLabel: 'Filter notice',
+    secondaryNote: 'Urgency over prose. Short summaries, direct browsing.',
+    chips: ['Fast scan', 'Offers', 'Action-ready'],
   },
   sbm: {
-    eyebrow: 'Saved resources',
-    headline: 'Social bookmarks arranged like curated collections.',
-    description: 'Bookmark pages should feel like shelves of useful resources, tools, references, and collections.',
+    eyebrow: 'Saved Signals',
+    headline: 'Curated links and tools worth keeping within reach.',
+    description:
+      'Signals are the third-party references we keep bookmarked — tools, primary sources, single-page utilities.',
     filterLabel: 'Filter collection',
-    secondaryNote: 'Curated resources need grouping and calm metadata.',
-    chips: ['Collections', 'Resources', 'Reference flow'],
+    secondaryNote: 'Curated resources; grouped by purpose, not by feed.',
+    chips: ['Collections', 'Tools', 'References'],
   },
   profile: {
-    eyebrow: 'People and profiles',
-    headline: 'Profiles with identity, trust, and reputation cues.',
-    description: 'Profile pages should make people, brands, and entities feel discoverable rather than buried in a generic feed.',
-    filterLabel: 'Filter profile category',
-    secondaryNote: 'Make identity and credibility visible before the grid begins.',
-    chips: ['Identity first', 'Trust cues', 'Creator/business cards'],
+    eyebrow: 'People',
+    headline: 'The operators and voices behind the index.',
+    description:
+      'Profiles collect the people, teams and brands who contribute to the directory or write for the desk.',
+    filterLabel: 'Filter people',
+    secondaryNote: 'Identity and credibility surface before the grid.',
+    chips: ['Contributors', 'Operators', 'Voices'],
   },
   pdf: {
-    eyebrow: 'Document library',
-    headline: 'PDFs and documents presented as a useful library.',
-    description: 'PDF pages should feel like downloadable guides, reports, files, and reference material instead of normal articles.',
-    filterLabel: 'Filter document type',
-    secondaryNote: 'Document surfaces need archive cues, file context, and clear browsing.',
-    chips: ['Documents', 'Guides', 'Archive ready'],
+    eyebrow: 'Reference Library',
+    headline: 'Reference documents, guides and reports for the field.',
+    description:
+      'The Reference Library is the citable half of the platform — briefings, guides and research files, each with a preview and a download.',
+    filterLabel: 'Filter reference type',
+    secondaryNote: 'Structured metadata, previewable files, quick download.',
+    chips: ['Reference-grade', 'Guides', 'Reports'],
   },
   listing: {
-    eyebrow: 'Business directory',
-    headline: 'Business listings built for discovery and comparison.',
-    description: 'Listing pages should behave like a directory with trust cues, metadata, and a practical search rhythm.',
-    filterLabel: 'Filter business category',
-    secondaryNote: 'Prioritize comparison, location, and direct action paths.',
-    chips: ['Directory', 'Compare', 'Business discovery'],
+    eyebrow: 'Local Directory',
+    headline: 'Verified places, operators and services — indexed for real use.',
+    description:
+      'The Local Directory is the working half of the platform — real addresses, hours, and contact details, kept honest by regular review.',
+    filterLabel: 'Filter category',
+    secondaryNote: 'Real details over marketing copy. Address, phone, hours.',
+    chips: ['Directory', 'Verified', 'Location-first'],
   },
   image: {
-    eyebrow: 'Visual gallery',
-    headline: 'Image posts with a gallery-first browsing experience.',
-    description: 'Image pages should lead with visual impact, stronger cards, and a portfolio-like rhythm.',
-    filterLabel: 'Filter visual category',
-    secondaryNote: 'Let images carry the page before long text does.',
-    chips: ['Gallery', 'Visual-first', 'Portfolio mood'],
+    eyebrow: 'Field Gallery',
+    headline: 'Image-led entries with a gallery-first rhythm.',
+    description:
+      'Visual entries let the imagery do the talking — portfolio pieces, field photography and long-form visual reports.',
+    filterLabel: 'Filter gallery',
+    secondaryNote: 'Images lead; text follows.',
+    chips: ['Gallery', 'Visual-first', 'Portfolio'],
   },
 } satisfies Record<TaskKey, TaskPageVoice>
